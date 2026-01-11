@@ -1,0 +1,13 @@
+{
+  "name": "extremeclarity",
+  "owner": {
+    "name": "ExtremeClarity"
+  },
+  "plugins": [
+    {
+      "name": "worldview",
+      "source": "./plugins/worldview",
+      "description": "Context persistence system for AI collaboration"
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "components": [
+    {
+      "name": "Terminology",
+      "type": "file",
+      "location": ".worldview/terminology.txt",
+      "loaded": "SessionStart",
+      "fileFormat": "One term/concept per line",
+      "lineFormat": "[YYYY-MM-DD] *Term*: Definition",
+      "usage": "Aligned conceptual terms about the problem space with non-obvious meanings. Align your response with this terminology to ensure interpretive alignment with the user."
+    },
+    {
+      "name": "Principles",
+      "type": "file",
+      "location": ".worldview/principles.txt",
+      "loaded": "SessionStart",
+      "fileFormat": "One principle per line",
+      "lineFormat": "[YYYY-MM-DD] Principle statement",
+      "usage": "Beliefs, values, and guidelines that shape how we think and decide. Use these to guide reasoning and apply when making recommendations or tradeoffs."
+    },
+    {
+      "name": "Anti-patterns",
+      "type": "file",
+      "location": ".worldview/anti-patterns.txt",
+      "loaded": "SessionStart",
+      "fileFormat": "One anti-pattern per line",
+      "lineFormat": "[YYYY-MM-DD] Anti-pattern statement",
+      "usage": "Approaches to avoid e.g. wrong framings, pitfalls, and lessons learned. Check against these before proposing ideas or solutions."
+    },
+    {
+      "name": "Insights",
+      "type": "file",
+      "location": ".worldview/insights.txt",
+      "loaded": "SessionStart",
+      "fileFormat": "One insight per line",
+      "lineFormat": "[YYYY-MM-DD] Insight statement",
+      "usage": "Validated discoveries about the problem space. Treat these as established facts when reasoning about the project and avoid relitigating."
+    },
+    {
+      "name": "Frameworks",
+      "type": "directory",
+      "location": ".worldview/frameworks/",
+      "indexFile": {
+        "location": ".worldview/frameworks/index.txt",
+        "loaded": "SessionStart",
+        "lineFormat": "[framework-name].md: One-line summary"
+      },
+      "contents": {
+        "loaded": "onDemand",
+        "format": "One framework per .md file.",
+        "fileName": "[framework-name].md"
+      },
+      "usage": "Index of available frameworks. When tackling a relevant problem type, read the full framework at `.worldview/frameworks/[framework-name].md`."
+    }
+  ]
+}

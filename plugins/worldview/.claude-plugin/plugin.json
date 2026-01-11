@@ -1,0 +1,7 @@
+{
+  "name": "worldview",
+  "description": "Worldview context system for high-leverage AI collaboration",
+  "version": "1.0.0",
+  "commands": "./commands/",
+  "hooks": "./hooks/hooks.json"
+}

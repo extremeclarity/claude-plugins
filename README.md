@@ -2,12 +2,6 @@
 
 Claude Code plugins for high-leverage AI collaboration.
 
-## Installation
-
-```
-/plugin marketplace add extremeclarity/claude-plugins
-```
-
 ## Available Plugins
 
 ### Worldview

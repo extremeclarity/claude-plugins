@@ -93,15 +93,8 @@ Scan for emergent knowledge not explicitly captured:
 | Approaches ruled out | Anti-patterns |
 | Validated empirical findings | Insights |
 
-### Check Frameworks for Overlap
-
-**Source:** `.worldview/frameworks/index.txt`
-
-Read the index. Check for similar or overlapping frameworks. Propose merges if found.
-
 ## Anti-Patterns
 
 - DO NOT narrate your analysis — work silently, output only the final plan
 - DO NOT add something just because it came up in conversation — apply the bar
 - DO NOT skip plan mode — all changes require approval
-- DO NOT auto-merge frameworks without user confirmation

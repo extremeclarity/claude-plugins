@@ -19,6 +19,7 @@ claude --plugin-dir /path/to/plugins/worldview
 ```
 /worldview:setup            # Initialize worldview in current project
 /worldview:distill          # Promote knowledge from conversation to worldview
+/worldview:consolidate      # Remove redundant or superseded context
 /worldview:add-framework    # Save a thinking framework from conversation
 /worldview:import-framework # Import frameworks from external files
 ```

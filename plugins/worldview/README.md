@@ -4,15 +4,20 @@ Context persistence system for AI collaboration. Captures durable knowledge that
 
 ## Installation
 
-```
-/plugin marketplace add extremeclarity/claude-plugins
-/plugin install worldview@extremeclarity
-```
+1. Add the marketplace:
+   ```
+   /plugin marketplace add extremeclarity/claude-plugins
+   ```
 
-For local development:
-```bash
-claude --plugin-dir /path/to/plugins/worldview
-```
+2. Install the plugin:
+   ```
+   /plugin install worldview@extremeclarity
+   ```
+
+3. Initialize in your project:
+   ```
+   /worldview:setup
+   ```
 
 ## Quick Start
 
@@ -26,9 +31,7 @@ claude --plugin-dir /path/to/plugins/worldview
 
 ## What It Does
 
-Worldview stores what you learn about a project over time — terminology, principles, insights, frameworks — so future sessions start with accumulated context rather than from scratch.
-
-On each session start, worldview loads core context automatically. Claude uses this to:
+Worldview builds persistent strategic context as your collaborate with AI. On each session start, worldview loads core context automatically. Claude uses this to:
 - Align with your terminology
 - Apply your principles when making recommendations
 - Avoid known anti-patterns
@@ -52,12 +55,12 @@ On each session start, worldview loads core context automatically. Claude uses t
 
 1. **Conversation** — Knowledge emerges through discussion
 2. **Distill** — User runs `/worldview:distill` to promote durable knowledge
-3. **SessionStart** — Core context loads automatically on next session
+3. **Session Start** — Core context loads automatically on next session
 4. **Application** — Claude uses context to inform responses
 
 ## Per-Project Configuration
 
-Create `WORLDVIEW.md` in your project root to customize distill behavior:
+Create `WORLDVIEW.md` in your project root to customize distill behavior. E.g:
 
 ```markdown
 # Worldview Config
@@ -65,20 +68,8 @@ Create `WORLDVIEW.md` in your project root to customize distill behavior:
 ## Terminology
 Only capture terms related to the domain model.
 
-## Principles
-Apply a high bar — only promote principles repeated across sessions.
-
 ## Insights
 This is a research project. Capture experimental findings even if tentative.
 ```
 
 This file is optional. Distill reads it (if present) and applies overrides to default criteria.
-
-## Quality Bar
-
-Every addition costs context space in every future session. Distill applies strict criteria:
-
-- **Future Value Test** — Will this help Claude in future sessions?
-- **Conceptual Test** — Would this matter if we changed the tech stack?
-- **Uniqueness Test** — Is this already captured or general knowledge?
-- **Conciseness** — One sentence for principles, anti-patterns, insights

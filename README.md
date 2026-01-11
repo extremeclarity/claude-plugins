@@ -4,9 +4,12 @@ Claude Code plugins for high-leverage AI collaboration.
 
 ## Installation
 
-```
-/plugin marketplace add extremeclarity/claude-plugins
-```
+1. Add the marketplace:
+   ```
+   /plugin marketplace add extremeclarity/claude-plugins
+   ```
+
+2. Install plugins from the marketplace (see below)
 
 ## Available Plugins
 
@@ -16,6 +19,11 @@ Context persistence system. Captures durable knowledge that survives across sess
 
 ```
 /plugin install worldview@extremeclarity
+```
+
+Then initialize in your project:
+```
+/worldview:setup
 ```
 
 See [plugins/worldview/README.md](plugins/worldview/README.md) for details.

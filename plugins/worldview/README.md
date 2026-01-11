@@ -4,17 +4,19 @@ Context persistence system for AI collaboration. Captures durable knowledge that
 
 ## Installation
 
-1. Add the marketplace:
+1. Open the plugin manager in Claude Code
    ```
-   /plugin marketplace add extremeclarity/claude-plugins
-   ```
-
-2. Install the plugin:
-   ```
-   /plugin install worldview@extremeclarity
+   /plugin
    ```
 
-3. Initialize in your project:
+2. Add the Extreme Clarity marketplace
+   ```
+   extremeclarity/claude-plugins
+   ```
+
+3. Install the Worldview plugin from the marketplace
+
+4. Initialize in your project
    ```
    /worldview:setup
    ```

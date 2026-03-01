@@ -8,6 +8,11 @@
       "name": "worldview",
       "source": "./plugins/worldview",
       "description": "Context persistence system for AI collaboration"
+    },
+    {
+      "name": "goodthinking",
+      "source": "./plugins/goodthinking",
+      "description": "Thinking skills that improve conversation quality before execution"
     }
   ]
 }

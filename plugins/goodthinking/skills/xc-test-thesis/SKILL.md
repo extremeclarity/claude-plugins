@@ -12,13 +12,6 @@ Determine what's defensible, what's contested, and what falls apart in a thesis 
 
 Two context-blind agents analyse the thesis in parallel — one builds the strongest case FOR, one finds the strongest case AGAINST. They exchange findings and refine. The main agent synthesises into a defensibility spectrum.
 
-### Success Criteria
-
-- **Adversarial rigour** — Both sides present their strongest case, not a balanced summary
-- **Evidence-grounded** — Claims are tied to specific reasoning or evidence, not vague assertions
-- **Calibrated** — The spectrum distinguishes what's solid from what's contested from what's unsupported
-- **Actionable** — The user can see what to trust, what to investigate, and what to discard
-
 ## Part 1: Evaluate
 
 - Think about whether this skill actually applies to the current situation. If it doesn't, skip silently and move on.

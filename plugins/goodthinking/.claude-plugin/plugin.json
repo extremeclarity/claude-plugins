@@ -2,6 +2,5 @@
   "name": "goodthinking",
   "description": "Thinking skills that improve conversation quality before execution",
   "version": "0.1.0",
-  "commands": "./commands/",
-  "hooks": "./hooks/hooks.json"
+  "commands": "./commands/"
 }

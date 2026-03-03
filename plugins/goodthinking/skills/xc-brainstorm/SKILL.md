@@ -10,7 +10,7 @@ Generate a high volume of genuinely diverse solution ideas, then organise them i
 
 ## Method
 
-Frame the problem as How Might We questions, spawn parallel context-blind agents with different diversity primes to generate ideas, then deduplicate and group into strategic themes.
+Frame the problem as How Might We questions, spawn parallel agents with different diversity primes to generate ideas, then deduplicate and group into strategic themes. Each prime is either context-blind (for divergent thinking) or context-aware (for grounded thinking), decided by the orchestrator based on whether the prime benefits from knowing project reality.
 
 ### Success Criteria
 
@@ -29,8 +29,9 @@ Frame the problem as How Might We questions, spawn parallel context-blind agents
 
 ### 1. Track progress
 - Create a task list so the user can track progress:
-  - Frame HMW questions and select primes
+  - Frame HMW questions and select primes (with context visibility)
   - Confirm with user
+  - Gather context for context-aware primes
   - Generate ideas (parallel agents)
   - Group ideas into themes
 
@@ -47,24 +48,51 @@ Frame the problem as How Might We questions, spawn parallel context-blind agents
 | Context-based | No context (naive), full context (strategic) |
 | Lens-based | Minimalist, enterprise, developer-focused, end-user-focused |
 
+- For each prime, decide **context visibility**:
+  - **Context-blind** — primes that derive value from *not knowing* (naive, outsider, cross-domain, minimalist). Ignorance of current reality is the feature.
+  - **Context-aware** — primes that derive value from *grounding in reality* (developer-focused, pragmatist, strategic, enterprise). Without project context, these primes produce generic ideas indistinguishable from blind ones.
+- For each context-aware prime, identify **what context to gather** — relevant files, architecture patterns, existing implementations, constraints, or conventions. Be specific (e.g., "read src/auth/ to understand current auth flow") rather than gathering everything.
+
 ### 4. Confirm
-- Present HMWs and primes to the user for approval. Stop and wait for confirmation before proceeding.
+- Present HMWs and primes to the user for approval, including context visibility per prime:
+  - Prime A (context-blind) — why blindness helps this perspective
+  - Prime B (context-aware: brief description of what context) — why grounding helps this perspective
+- Stop and wait for confirmation before proceeding.
 
-### 5. Generate
-- For each prime, spawn a context-blind agent (Explore task agent, Haiku). Name each after its prime. Use the following prompt:
+### 5. Gather context
+- If any primes are context-aware, gather the identified context now — read relevant files, explore relevant parts of the codebase. Use an Explore Agent to do this if necessary.  
+- Prepare a focused context summary for each context-aware prime. Keep it concise — enough to ground ideation, not so much that it overwhelms the agent's focus.
+- Skip this step if all primes are context-blind.
 
+### 6. Generate
+- For each prime, spawn an agent (Explore task agent, Haiku). Name each after its prime.
+
+**Context-blind prompt:**
 ```
 You are brainstorming solutions from a {prime} perspective. Do NOT read any files, search any directories, or look for additional context. Work ONLY with what is given below.
 
 HMW QUESTIONS:
 {hmw_questions}
 
-Generate 8-10 solution ideas per HMW question. Be concrete and specific. Think from your assigned perspective — a {prime} thinker would approach this differently from other perspectives.
+Generate 5 solution ideas per HMW question. Be concrete and specific. Think from your assigned perspective — a {prime} thinker would approach this differently from other perspectives.
+```
+
+**Context-aware prompt:**
+```
+You are brainstorming solutions from a {prime} perspective. Do NOT read any files, search any directories, or look for additional context. Work ONLY with what is given below.
+
+PROJECT CONTEXT:
+{gathered_context}
+
+HMW QUESTIONS:
+{hmw_questions}
+
+Generate 5 solution ideas per HMW question. Be concrete and specific. Think from your assigned perspective — a {prime} thinker would approach this differently from other perspectives. Use the project context to ground your ideas in what actually exists, but don't limit yourself to incremental improvements.
 ```
 
 - Run all agents in parallel.
 
-### 6. Combine
+### 7. Combine
 - Combine all ideas across agents into a single list.
 
 ## Final output

@@ -1,6 +1,6 @@
 ---
 name: group-ideas
-description: Consolidates ideas into strategic themes by deduplicating and grouping. Use this whenever a list of ideas emerges from the conversation that could benefit from organising.
+description: Consolidates ideas into strategic themes by deduplicating and grouping.
 ---
 
 # Introduction
@@ -22,12 +22,7 @@ Deduplicate ideas, then explore the space of possible groupings from two perspec
 - **Actionable** — Each theme can be evaluated or prioritised independently
 - **Maximum 7 themes** — Fewer is better. Force hard choices.
 
-## Part 1: Evaluate
-
-- Think about whether this skill actually applies to the current situation. If it doesn't, skip silently and move on.
-- If it does, suggest it to the user conversationally. Briefly explain why you think it's relevant. Wait for confirmation before proceeding.
-
-## Part 2: Workflow
+## Workflow
 
 ### 1. Track progress
 - Create a task list so the user can track progress:
@@ -54,10 +49,10 @@ Deduplicate ideas, then explore the space of possible groupings from two perspec
 ```
 
 ### 4. Generate problem-space themes
-- Spawn a context-blind agent (Haiku task agent). Name it: "Problem-space theme design". Use the following prompt:
+- Spawn a blind-reasoner agent (Haiku). Name it: "Problem-space theme design". Use the following prompt:
 
 ```
-You are designing themes to organise solutions for a problem. Do NOT read any files, search any directories, or look for additional context. Work ONLY with the problem description below. You will NOT see the actual solutions — this is intentional.
+You are designing themes to organise solutions for a problem. Work ONLY with the problem description below. You will NOT see the actual solutions — this is intentional.
 
 PROBLEM: "{problem_description}"
 
@@ -75,7 +70,7 @@ For each grouping, state:
 
 ### 5. Select best grouping
 - This step runs silently.
-- Spawn an Opus task agent. Name it: "Select best grouping". Pass it all groupings from steps 3 and 4, the deduplicated ideas, and the success criteria. Use the following prompt:
+- Spawn a blind-reasoner agent (Opus). Name it: "Select best grouping". Pass it all groupings from steps 3 and 4, the deduplicated ideas, and the success criteria. Use the following prompt:
 
 ```
 You are selecting the best theme grouping for a set of ideas. You have groupings from two sources — some designed with knowledge of the actual ideas, some designed from the problem description alone without seeing ideas.
@@ -129,4 +124,4 @@ Present the selected grouping to the user in this format:
 ```
 
 ## Related skills
-- **brainstorm** — If the user needs to generate ideas first, run brainstorm (which runs group-ideas automatically after).
+- **brainstorm** — If the user needs to generate ideas first, run brainstorm. It groups its own ideas inline; run group-ideas when a more rigorous pass is wanted.

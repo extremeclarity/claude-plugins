@@ -1,6 +1,6 @@
 ---
 name: test-thesis
-description: Tests whether a thesis or hypothesis holds up under adversarial scrutiny. Use this when the user is doing strategic planning and has a thesis or hypothesis they want to evaluate for robustness.
+description: Tests whether a thesis or hypothesis holds up under adversarial scrutiny.
 ---
 
 # Introduction
@@ -12,12 +12,7 @@ Determine what's defensible, what's contested, and what falls apart in a thesis 
 
 Two context-blind agents analyse the thesis in parallel — one builds the strongest case FOR, one finds the strongest case AGAINST. They exchange findings and refine. The main agent synthesises into a defensibility spectrum.
 
-## Part 1: Evaluate
-
-- Think about whether this skill actually applies to the current situation. If it doesn't, skip silently and move on.
-- If it does, suggest it to the user conversationally. Briefly explain why you think it's relevant. Wait for confirmation before proceeding.
-
-## Part 2: Workflow
+## Workflow
 
 ### 1. Track progress
 - Create a task list so the user can track progress:
@@ -30,7 +25,7 @@ Two context-blind agents analyse the thesis in parallel — one builds the stron
 - State the thesis clearly and ask the user to confirm it. Also confirm what source material to work from (conversation context, specific files, or both). Wait for confirmation before proceeding.
 
 ### 3. Parallel analysis
-- Spawn two context-blind agents in parallel (Explore task agents, Opus). Use the following prompts:
+- Spawn two agents in parallel (Opus) using the prompts below. Use blind-reasoner agents when the source material is conversation context only. Use general-purpose agents when source files are specified, so they can read those files. The prompts instruct them to read nothing else.
 
 **Analyst agent** (name: "Analyst — build case FOR"):
 ```
@@ -82,6 +77,7 @@ Refine your position:
 - Address their strongest counter-points
 - Concede what you must
 - Strengthen what survives
+- State the evidence that would change your mind (your cruxes)
 ```
 
 **Resume Skeptic:**
@@ -94,10 +90,13 @@ Refine your position:
 - Address their strongest evidence
 - Identify what you cannot defeat
 - Sharpen your remaining critiques
+- State the evidence that would change your mind (your cruxes)
 ```
 
 ### 5. Synthesise
 - Using both agents' refined reports, create the defensibility spectrum.
+- Weigh evidence by what it discriminates between. Evidence consistent with both positions discriminates nothing and should carry no weight.
+- Express confidence as rough probabilities rather than hedge words.
 
 ## Final output
 
@@ -111,7 +110,7 @@ Evidence and reasoning that both sides agree on.
 
 ### Contested
 Claims where both sides found plausible but competing evidence or interpretations.
-[For each: what the analyst says, what the skeptic says, and which way it leans]
+[For each: what the analyst says, what the skeptic says, which way it leans, and what evidence would settle it]
 
 ### Unsupported
 Claims that were either debunked with counter-evidence, had no grounding, or relied on unstated assumptions.
@@ -120,7 +119,7 @@ Claims that were either debunked with counter-evidence, had no grounding, or rel
 A revised version of the thesis incorporating only what survived scrutiny.
 
 ### Open questions
-What remains uncertain and would need further investigation.
+The cruxes. The evidence that would most shift the assessment if it appeared, ordered by impact.
 ```
 
 ## Related skills

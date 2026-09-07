@@ -1,6 +1,6 @@
 ---
 name: brainstorm
-description: Generates diverse solution ideas using parallel agents with different perspectives. Use this whenever the user is exploring solutions for a problem or goal.
+description: Generates diverse solution ideas using parallel agents with different perspectives.
 ---
 
 # Introduction
@@ -10,7 +10,7 @@ Generate a high volume of genuinely diverse solution ideas, then organise them i
 
 ## Method
 
-Frame the problem as How Might We questions, spawn parallel agents with different diversity primes to generate ideas, then deduplicate and group into strategic themes. Each prime is either context-blind (for divergent thinking) or context-aware (for grounded thinking), decided by the orchestrator based on whether the prime benefits from knowing project reality.
+Frame the problem as How Might We questions, spawn parallel agents with different diversity primes, then deduplicate and group the ideas inline. Each prime is either context-blind (for divergent thinking) or context-aware (for grounded thinking). The whole workflow runs in a single pass. The user sees nothing until the final themed output.
 
 ### Success Criteria
 
@@ -20,56 +20,36 @@ Frame the problem as How Might We questions, spawn parallel agents with differen
 - **Actionable** — Concrete enough to evaluate
 - **Novelty** — Not just restated existing solutions
 
-## Part 1: Evaluate
+## Workflow
 
-- Think about whether this skill actually applies to the current situation. If it doesn't, skip silently and move on.
-- If it does, suggest it to the user conversationally. Briefly explain why you think it's relevant. Wait for confirmation before proceeding.
-
-## Part 2: Workflow
-
-### 1. Track progress
-- Create a task list so the user can track progress:
-  - Frame HMW questions and select primes (with context visibility)
-  - Confirm with user
-  - Gather context for context-aware primes
-  - Generate ideas (parallel agents)
-  - Group ideas into themes
-
-### 2. Frame
+### 1. Frame
 - From the user's problem or goal, generate How Might We questions:
   - One HMW per problem area (or group related areas)
   - Format: "How might we [action] so that [outcome]?"
 
-### 3. Select primes
-- Propose 2-4 diversity primes. Genuine diversity comes from different context or lenses:
+### 2. Select primes
+- Pick 2 primes. One context-blind, one context-aware. Use more only when the user asks for extra breadth. Genuine diversity comes from different context or lenses:
 
 | Type | Examples |
 |------|----------|
 | Context-based | No context (naive), full context (strategic) |
 | Lens-based | Minimalist, enterprise, developer-focused, end-user-focused |
+| Analogy-based | Far-field (how unrelated domains solve the same underlying structure) |
 
-- For each prime, decide **context visibility**:
-  - **Context-blind** — primes that derive value from *not knowing* (naive, outsider, cross-domain, minimalist). Ignorance of current reality is the feature.
-  - **Context-aware** — primes that derive value from *grounding in reality* (developer-focused, pragmatist, strategic, enterprise). Without project context, these primes produce generic ideas indistinguishable from blind ones.
-- For each context-aware prime, identify **what context to gather** — relevant files, architecture patterns, existing implementations, constraints, or conventions. Be specific (e.g., "read src/auth/ to understand current auth flow") rather than gathering everything.
+- **Context-blind** primes derive value from not knowing (naive, outsider, cross-domain, minimalist, far-field). Ignorance of current reality is the feature.
+- **Context-aware** primes derive value from grounding in reality (developer-focused, pragmatist, strategic, enterprise). Without project context they produce generic ideas.
+- For each context-aware prime, identify what context to gather. Be specific (e.g., "read src/auth/ to understand current auth flow") rather than gathering everything.
 
-### 4. Confirm
-- Present HMWs and primes to the user for approval, including context visibility per prime:
-  - Prime A (context-blind) — why blindness helps this perspective
-  - Prime B (context-aware: brief description of what context) — why grounding helps this perspective
-- Stop and wait for confirmation before proceeding.
-
-### 5. Gather context
-- If any primes are context-aware, gather the identified context now — read relevant files, explore relevant parts of the codebase. Use an Explore Agent to do this if necessary.  
-- Prepare a focused context summary for each context-aware prime. Keep it concise — enough to ground ideation, not so much that it overwhelms the agent's focus.
+### 3. Gather context
+- Gather the identified context for context-aware primes. Read the few files that matter directly. Use an Explore agent only when the relevant context is too large to read directly.
 - Skip this step if all primes are context-blind.
 
-### 6. Generate
-- For each prime, spawn an agent (Explore task agent, Haiku). Name each after its prime.
+### 4. Generate
+- For each prime, spawn a blind-reasoner agent (Haiku). Name each after its prime.
 
 **Context-blind prompt:**
 ```
-You are brainstorming solutions from a {prime} perspective. Do NOT read any files, search any directories, or look for additional context. Work ONLY with what is given below.
+You are brainstorming solutions from a {prime} perspective. Work ONLY with what is given below.
 
 HMW QUESTIONS:
 {hmw_questions}
@@ -79,7 +59,7 @@ Generate 5 solution ideas per HMW question. Be concrete and specific. Think from
 
 **Context-aware prompt:**
 ```
-You are brainstorming solutions from a {prime} perspective. Do NOT read any files, search any directories, or look for additional context. Work ONLY with what is given below.
+You are brainstorming solutions from a {prime} perspective. Work ONLY with what is given below.
 
 PROJECT CONTEXT:
 {gathered_context}
@@ -92,14 +72,17 @@ Generate 5 solution ideas per HMW question. Be concrete and specific. Think from
 
 - Run all agents in parallel.
 
-### 7. Combine
-- Combine all ideas across agents into a single list.
+### 5. Synthesise
+- This step runs inline. Spawn no further agents.
+- Merge duplicate and near-duplicate ideas across agents.
+- Where two ideas from different agents combine into something stronger, add the hybrid.
+- Group the ideas into at most 7 themes by the dimension of the problem each addresses. Avoid grouping by surface similarity.
 
 ## Final output
-- Present the combined idea list to the user.
-- Run the **group-ideas** skill to organise the ideas into strategic themes.
+- Present a single message. The HMW questions, one line on the primes used, and the ideas grouped by theme.
+- If the user wants more, offer a build-on round (resume each generator with the other agents' strongest ideas) or a full group-ideas pass. Run these only on request.
 
 ## Related skills
 - **clarify-framing** — If the problem isn't clear, run clarify-framing first.
 - **breakdown-problem** — If the problem is too large, break it down first and brainstorm per sub-part.
-- **group-ideas** — Always run after brainstorming to organise ideas into themes.
+- **group-ideas** — For a more rigorous grouping than the inline pass.

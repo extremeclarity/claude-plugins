@@ -1,6 +1,6 @@
 ---
 name: breakdown-problem
-description: Breaks problems and goals into independent parts that can be tackled separately. Use this whenever the user states a problem or goal that has multiple dimensions or parts.
+description: Breaks problems and goals into independent parts that can be tackled separately.
 ---
 
 # Introduction
@@ -20,21 +20,17 @@ Propose a breakdown, then iteratively validate and refine using a context-blind 
 - **Problem-focused** — Sub-parts describe problems or goals, not solutions
 - **Actionable** — Each sub-part can be worked on independently
 
-## Part 1: Evaluate
-
-- Think about whether this skill actually applies to the current situation. If it doesn't, skip silently and move on.
-- If it does, suggest it to the user conversationally. Briefly explain why you think it's relevant. Wait for confirmation before proceeding.
-
-## Part 2: Workflow
+## Workflow
 
 - Across all steps, focus on what the problem or goal IS, not how to solve it.
 
 ### 1. Propose breakdown
 - Think about the problem or goal the user has shared. Use conversation history for relevant details and clues. Do not look for additional context in files or memory.
+- Try standard decomposition archetypes before settling. Break by lifecycle stage, by stakeholder, by component, or by driver tree (the quantities that combine into the whole). Pick the cut that fits the problem best.
 - Propose a breakdown into sub-parts. Self-critique against the success criteria. Describe what you observe, not why it happens — stay far from causal or solution framing.
 
 ### 2. Validate
-- Spawn a context-blind agent (Haiku task agent). Name it: "Validate breakdown". Provide the agent with the original problem/goal and your proposed breakdown. Ask the agent to validate against the success criteria and surface any gaps or inconsistencies.
+- Spawn a blind-reasoner agent (Sonnet). Name it: "Validate breakdown". Provide the agent with the original problem/goal and your proposed breakdown. Ask the agent to validate against the success criteria and surface any gaps or inconsistencies.
 
 ### 3. Revise
 - If the validator surfaced issues, revise the breakdown. Make the smallest changes that address the issues. Preserve the structure of the original breakdown. Do NOT rewrite from scratch.

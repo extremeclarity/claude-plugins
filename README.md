@@ -42,7 +42,7 @@ Thinking skills that improve conversation quality before execution begins. Conve
 
 ## How It Works
 
-Skills are loaded eagerly. Claude notices when a skill might apply and suggests it conversationally. Each skill has an evaluation step that determines relevance before running a full workflow.
+Skills run when invoked. Type the skill directly, for example `/extremeclarity:clarify-framing`, or ask Claude to run one by name.
 
 Skills use multi-agent patterns where beneficial. `test-thesis` spawns parallel Analyst and Skeptic agents that build opposing cases, exchange findings, and refine. Claude then synthesises the results into a defensibility spectrum. `brainstorm` spawns parallel agents with different diversity primes so they avoid converging on variations of one idea.
 
@@ -62,4 +62,5 @@ Context-blind agents have no access to conversation history or files. They are u
   marketplace.json     Marketplace manifest
 skills/                One directory per skill, each holding a SKILL.md
 commands/              Slash commands
+agents/                Tool-restricted subagents spawned by the skills
 ```

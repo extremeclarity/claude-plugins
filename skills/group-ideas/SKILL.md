@@ -124,4 +124,4 @@ Present the selected grouping to the user in this format:
 ```
 
 ## Related skills
-- **brainstorm** — If the user needs to generate ideas first, run brainstorm (which runs group-ideas automatically after).
+- **brainstorm** — If the user needs to generate ideas first, run brainstorm. It groups its own ideas inline; run group-ideas when a more rigorous pass is wanted.

@@ -77,6 +77,7 @@ Refine your position:
 - Address their strongest counter-points
 - Concede what you must
 - Strengthen what survives
+- State the evidence that would change your mind (your cruxes)
 ```
 
 **Resume Skeptic:**
@@ -89,10 +90,13 @@ Refine your position:
 - Address their strongest evidence
 - Identify what you cannot defeat
 - Sharpen your remaining critiques
+- State the evidence that would change your mind (your cruxes)
 ```
 
 ### 5. Synthesise
 - Using both agents' refined reports, create the defensibility spectrum.
+- Weigh evidence by what it discriminates between. Evidence consistent with both positions discriminates nothing and should carry no weight.
+- Express confidence as rough probabilities rather than hedge words.
 
 ## Final output
 
@@ -106,7 +110,7 @@ Evidence and reasoning that both sides agree on.
 
 ### Contested
 Claims where both sides found plausible but competing evidence or interpretations.
-[For each: what the analyst says, what the skeptic says, and which way it leans]
+[For each: what the analyst says, what the skeptic says, which way it leans, and what evidence would settle it]
 
 ### Unsupported
 Claims that were either debunked with counter-evidence, had no grounding, or relied on unstated assumptions.
@@ -115,7 +119,7 @@ Claims that were either debunked with counter-evidence, had no grounding, or rel
 A revised version of the thesis incorporating only what survived scrutiny.
 
 ### Open questions
-What remains uncertain and would need further investigation.
+The cruxes. The evidence that would most shift the assessment if it appeared, ordered by impact.
 ```
 
 ## Related skills

@@ -33,16 +33,18 @@ Focus the conversation on clarifying the user's problem or goal until success cr
 ### 3. Revise
 - Revise your framing based on answers provided by the user. Make the smallest changes that address the challenges. Preserve the structure of the original framing. Do NOT rewrite from scratch or invent new frameworks.
 
-### 4. Abstract
+### 4. Abstract and reframe
 - Spawn a blind-reasoner agent (Opus). Name it: "Check abstraction". Give it the revised problem statement and success criteria. Ask it to:
   1. Start with the problem statement
   2. Ask "why" questions to think of more abstract problem statements
   3. Ask "how" questions to think of more concrete problem statements
-  4. Respond with 2-3 alternative problem statements at different levels of abstraction that meet success criteria
+  4. Apply three reframing moves. Invert the problem. Question whether each stated constraint is real. Restate the problem from a different stakeholder's point of view.
+  5. Respond with 2-4 alternative problem statements at different levels of abstraction or framing that meet success criteria
 - Evaluate the alternatives. Independently check each against success criteria. If a promising alternative opens a better solution space than the current framing, fold it into the final output as an alternative framing. Otherwise, proceed with the original.
 
 ## Final output
 - Present the framing: Present the sharpened problem or goal statement to the user naturally in conversation.
+- List assumptions: Beneath the framing, list the load-bearing assumptions it rests on. Mark each one supported or unsupported by what the user has shared. Unsupported assumptions are candidates for clarifying questions.
 - If abstraction surfaced a promising alternative, present it alongside the primary framing with a brief note on what each level opens up. Let the user choose.
 - Direct conversation: If the problem or goal remains ambiguous, gently direct the conversation towards key areas of ambiguity. Otherwise, nudge the user for confirmation of the framing and wait for next steps.
 

@@ -28,6 +28,7 @@ Frame the problem as How Might We questions, spawn parallel agents with differen
   - Confirm with user
   - Gather context for context-aware primes
   - Generate ideas (parallel agents)
+  - Build on ideas across agents
   - Group ideas into themes
 
 ### 2. Frame
@@ -42,6 +43,7 @@ Frame the problem as How Might We questions, spawn parallel agents with differen
 |------|----------|
 | Context-based | No context (naive), full context (strategic) |
 | Lens-based | Minimalist, enterprise, developer-focused, end-user-focused |
+| Analogy-based | Far-field (how unrelated domains solve the same underlying structure) |
 
 - For each prime, decide **context visibility**:
   - **Context-blind** — primes that derive value from *not knowing* (naive, outsider, cross-domain, minimalist). Ignorance of current reality is the feature.
@@ -87,8 +89,11 @@ Generate 5 solution ideas per HMW question. Be concrete and specific. Think from
 
 - Run all agents in parallel.
 
-### 7. Combine
-- Combine all ideas across agents into a single list.
+### 7. Build on
+- Pick the 2-3 strongest ideas from each agent. Resume every agent with the strongest ideas from the other agents. Ask it to build on or combine them from its own perspective and produce 2-3 improved or hybrid ideas. Run the resumes in parallel.
+
+### 8. Combine
+- Combine all ideas from both rounds into a single list.
 
 ## Final output
 - Present the combined idea list to the user.

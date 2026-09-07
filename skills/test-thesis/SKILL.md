@@ -1,5 +1,5 @@
 ---
-name: xc-test-thesis
+name: test-thesis
 description: Tests whether a thesis or hypothesis holds up under adversarial scrutiny. Use this when the user is doing strategic planning and has a thesis or hypothesis they want to evaluate for robustness.
 ---
 
@@ -124,5 +124,5 @@ What remains uncertain and would need further investigation.
 ```
 
 ## Related skills
-- **xc-stress-test-decision** — For testing a specific decision or choice rather than a belief or thesis.
-- **xc-clarify-framing** — If the thesis itself is vague, clarify it first.
+- **stress-test-decision** — For testing a specific decision or choice rather than a belief or thesis.
+- **clarify-framing** — If the thesis itself is vague, clarify it first.

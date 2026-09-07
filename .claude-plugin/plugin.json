@@ -1,0 +1,8 @@
+{
+  "name": "extremeclarity",
+  "description": "Thinking skills that improve conversation quality before execution",
+  "version": "0.2.0",
+  "commands": "./commands/",
+  "skills": "./skills/",
+  "hooks": "./hooks/hooks.json"
+}

@@ -1,5 +1,5 @@
 ---
-name: xc-clarify-framing
+name: clarify-framing
 description: Sharpens problem and goal statements to be more precise, unambiguous, complete, and well-scoped. Use this whenever the user states a problem or goal, so that you're fully aligned on what they want to achieve.
 ---
 
@@ -52,4 +52,4 @@ Focus the conversation on clarifying the user's problem or goal until success cr
 - Direct conversation: If the problem or goal remains ambiguous, gently direct the conversation towards key areas of ambiguity. Otherwise, nudge the user for confirmation of the framing and wait for next steps.
 
 ## Related skills
-- **xc-breakdown-problem** — If the problem or goal is complex, suggest running xc-breakdown-problem to split it into independent parts.
+- **breakdown-problem** — If the problem or goal is complex, suggest running breakdown-problem to split it into independent parts.

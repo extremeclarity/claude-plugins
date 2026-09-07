@@ -1,5 +1,5 @@
 ---
-name: xc-brainstorm
+name: brainstorm
 description: Generates diverse solution ideas using parallel agents with different perspectives. Use this whenever the user is exploring solutions for a problem or goal.
 ---
 
@@ -97,9 +97,9 @@ Generate 5 solution ideas per HMW question. Be concrete and specific. Think from
 
 ## Final output
 - Present the combined idea list to the user.
-- Run the **xc-group-ideas** skill to organise the ideas into strategic themes.
+- Run the **group-ideas** skill to organise the ideas into strategic themes.
 
 ## Related skills
-- **xc-clarify-framing** — If the problem isn't clear, run xc-clarify-framing first.
-- **xc-breakdown-problem** — If the problem is too large, break it down first and brainstorm per sub-part.
-- **xc-group-ideas** — Always run after brainstorming to organise ideas into themes.
+- **clarify-framing** — If the problem isn't clear, run clarify-framing first.
+- **breakdown-problem** — If the problem is too large, break it down first and brainstorm per sub-part.
+- **group-ideas** — Always run after brainstorming to organise ideas into themes.

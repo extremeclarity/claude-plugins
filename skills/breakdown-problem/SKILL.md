@@ -1,5 +1,5 @@
 ---
-name: xc-breakdown-problem
+name: breakdown-problem
 description: Breaks problems and goals into independent parts that can be tackled separately. Use this whenever the user states a problem or goal that has multiple dimensions or parts.
 ---
 
@@ -45,4 +45,4 @@ Propose a breakdown, then iteratively validate and refine using a context-blind 
 - Direct conversation: Ask the user whether the breakdown looks right and wait for next steps.
 
 ## Related skills
-- **xc-clarify-framing** — If the problem or goal is ambiguous, run xc-clarify-framing first to clarify before decomposing.
+- **clarify-framing** — If the problem or goal is ambiguous, run clarify-framing first to clarify before decomposing.

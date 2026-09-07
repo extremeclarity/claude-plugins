@@ -1,5 +1,5 @@
 ---
-name: xc-audit-options
+name: audit-options
 description: Checks whether a set of options is well-constructed. Use this whenever the user presents options or choices to evaluate.
 ---
 
@@ -76,5 +76,5 @@ Want to adjust the options or proceed as is?
 ```
 
 ## Related skills
-- **xc-stress-test-decision** — After the user picks an option, stress-test the decision.
-- **xc-clarify-framing** — If the decision context itself is unclear, run xc-clarify-framing first.
+- **stress-test-decision** — After the user picks an option, stress-test the decision.
+- **clarify-framing** — If the decision context itself is unclear, run clarify-framing first.

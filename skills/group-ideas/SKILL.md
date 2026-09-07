@@ -1,5 +1,5 @@
 ---
-name: xc-group-ideas
+name: group-ideas
 description: Consolidates ideas into strategic themes by deduplicating and grouping. Use this whenever a list of ideas emerges from the conversation that could benefit from organising.
 ---
 
@@ -129,4 +129,4 @@ Present the selected grouping to the user in this format:
 ```
 
 ## Related skills
-- **xc-brainstorm** — If the user needs to generate ideas first, run xc-brainstorm (which runs xc-group-ideas automatically after).
+- **brainstorm** — If the user needs to generate ideas first, run brainstorm (which runs group-ideas automatically after).

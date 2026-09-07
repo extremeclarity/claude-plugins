@@ -1,5 +1,5 @@
 ---
-name: xc-stress-test-decision
+name: stress-test-decision
 description: Stress-tests a decision or position by surfacing concerns the user may not have considered. Use this whenever the user commits to a decision, chooses between different options, or takes a firm position.
 ---
 
@@ -62,5 +62,5 @@ What do you think — proceed or think through?
 ```
 
 ## Related skills
-- **xc-clarify-framing** — If the decision itself is unclear, run xc-clarify-framing first to clarify what's actually being decided.
-- **xc-breakdown-problem** — If the decision is complex, break it down into sub-decisions first.
+- **clarify-framing** — If the decision itself is unclear, run clarify-framing first to clarify what's actually being decided.
+- **breakdown-problem** — If the decision is complex, break it down into sub-decisions first.

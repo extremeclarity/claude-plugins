@@ -26,6 +26,7 @@ Propose a breakdown, then iteratively validate and refine using a context-blind 
 
 ### 1. Propose breakdown
 - Think about the problem or goal the user has shared. Use conversation history for relevant details and clues. Do not look for additional context in files or memory.
+- Try standard decomposition archetypes before settling. Break by lifecycle stage, by stakeholder, by component, or by driver tree (the quantities that combine into the whole). Pick the cut that fits the problem best.
 - Propose a breakdown into sub-parts. Self-critique against the success criteria. Describe what you observe, not why it happens — stay far from causal or solution framing.
 
 ### 2. Validate

@@ -29,7 +29,7 @@ Propose a breakdown, then iteratively validate and refine using a context-blind 
 - Propose a breakdown into sub-parts. Self-critique against the success criteria. Describe what you observe, not why it happens — stay far from causal or solution framing.
 
 ### 2. Validate
-- Spawn a blind-reasoner agent (Haiku). Name it: "Validate breakdown". Provide the agent with the original problem/goal and your proposed breakdown. Ask the agent to validate against the success criteria and surface any gaps or inconsistencies.
+- Spawn a blind-reasoner agent (Sonnet). Name it: "Validate breakdown". Provide the agent with the original problem/goal and your proposed breakdown. Ask the agent to validate against the success criteria and surface any gaps or inconsistencies.
 
 ### 3. Revise
 - If the validator surfaced issues, revise the breakdown. Make the smallest changes that address the issues. Preserve the structure of the original breakdown. Do NOT rewrite from scratch.

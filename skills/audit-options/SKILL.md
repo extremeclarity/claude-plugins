@@ -28,7 +28,7 @@ Audit the option set using a context-blind agent against framing integrity crite
 - Identify the option set the user has presented. State the decision context and list the options clearly. Use conversation history for context.
 
 ### 2. Audit
-- Spawn a blind-reasoner agent (Haiku). Name it: "Audit framing". Use the following prompt:
+- Spawn a blind-reasoner agent (Sonnet). Name it: "Audit framing". Use the following prompt:
 
 ```
 You are a framing integrity auditor. Work ONLY with what is given below.

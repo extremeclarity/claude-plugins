@@ -25,7 +25,7 @@ Focus the conversation on clarifying the user's problem or goal until success cr
 
 ### 1. Evaluate
 - Think about what the user wants to achieve. Use conversation history to look for relevant details and clues. Do not look for additional context in files or memory. Frame the problem or goal concisely in one paragraph or less.
-- Spawn a blind-reasoner agent (Haiku). Name it: "Evaluate framing". Ask the agent whether your framing meets success criteria or if there are any practical gaps. A practical gap is one that makes the problem or goal unclear to anyone who has no prior context. If no gaps exist, skip to final output and present the framing to the user. Otherwise continue to the next step.
+- Spawn a blind-reasoner agent (Sonnet). Name it: "Evaluate framing". Ask the agent whether your framing meets success criteria or if there are any practical gaps. A practical gap is one that makes the problem or goal unclear to anyone who has no prior context. If no gaps exist, skip to final output and present the framing to the user. Otherwise continue to the next step.
 
 ### 2. Clarify
 - Ask the user clarifying questions that will help you close gaps in your framing and meet success criteria. If asking more than one question, use the question tool.

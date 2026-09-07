@@ -10,7 +10,7 @@ Surface concerns about a decision or position that are relevant, novel, and impo
 
 ## Method
 
-Generate a broad set of counterarguments using a context-blind agent, then filter for what's genuinely worth the user's attention given what's already been discussed.
+Run a premortem on the decision using a context-blind agent. The agent assumes the decision already failed and explains why. Assumed failure produces more specific and more numerous causes than hypothetical doubt. Then filter for what's genuinely worth the user's attention given what's already been discussed.
 
 ### Success Criteria
 
@@ -24,15 +24,17 @@ Generate a broad set of counterarguments using a context-blind agent, then filte
 ### 1. Identify
 - Identify the decision or position the user is about to commit to. State it as a single clear proposition. Use conversation history for context.
 
-### 2. Challenge
-- Spawn a context-blind agent (Explore task agent, Haiku). Name it: "Challenge decision". Use the following prompt:
+### 2. Premortem
+- Spawn a context-blind agent (Explore task agent, Haiku). Name it: "Premortem". Use the following prompt:
 
 ```
-You are a skeptic-critic. Do NOT read any files, search any directories, or look for additional context. Work ONLY with the proposition below. Respond with your reasoning directly.
+You are running a premortem. Do NOT read any files, search any directories, or look for additional context. Work ONLY with the proposition below. Respond with your reasoning directly.
 
 PROPOSITION: "{proposition}"
 
-Your job: Generate as many reasons as possible why this decision might be wrong, risky, or suboptimal. Consider different angles: practical risks, hidden assumptions, opportunity costs, second-order effects, edge cases. Do not hold back or soften — the goal is breadth, not balance.
+Imagine it is one year later. This decision was carried out and it failed badly. The failure is a fact. Your job is to explain it, not to question whether it happened.
+
+Write the history of the failure as a list of distinct causes. For each cause, describe concretely how the failure unfolded. Cover different angles: practical risks, hidden assumptions, opportunity costs, second-order effects, edge cases. Do not hold back or soften — the goal is breadth, not balance.
 ```
 
 ### 3. Filter
@@ -42,6 +44,7 @@ Your job: Generate as many reasons as possible why this decision might be wrong,
   - Is it important — could it materially change the decision?
   - Is it actionable — can the user do something about it?
 - Drop anything that fails any criterion.
+- Order the surviving concerns by how severe the failure would be and how likely it seems. Most severe and likely first.
 
 ## Final output
 - If no concerns survive filtering: Tell the user the decision was stress-tested and nothing new came up. Proceed with the decision.
@@ -55,6 +58,8 @@ I stress-tested this decision and here are some considerations you may want to b
 
 What do you think — proceed or think through?
 ```
+
+- Where a surviving concern hinges on a future uncertainty, suggest a tripwire alongside it. A tripwire is a concrete observable condition that should trigger revisiting the decision.
 
 ## Related skills
 - **clarify-framing** — If the decision itself is unclear, run clarify-framing first to clarify what's actually being decided.

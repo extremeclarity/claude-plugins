@@ -4,5 +4,5 @@
   "version": "0.3.0",
   "commands": "./commands/",
   "skills": "./skills/",
-  "agents": "./agents/"
+  "agents": ["./agents/blind-reasoner.md"]
 }

@@ -1,6 +1,6 @@
 ---
 name: stress-test-decision
-description: Stress-tests a decision or position by surfacing concerns the user may not have considered. Use this whenever the user commits to a decision, chooses between different options, or takes a firm position.
+description: Stress-tests a decision or position by surfacing concerns the user may not have considered.
 ---
 
 # Introduction
@@ -19,12 +19,7 @@ Generate a broad set of counterarguments using a context-blind agent, then filte
 - **Importance** — Concern could materially change the decision if true
 - **Actionability** — User can actually do something about the concern
 
-## Part 1: Evaluate
-
-- Think about whether this skill actually applies to the current situation. If it doesn't, skip silently and move on.
-- If it does, suggest it to the user conversationally. Briefly explain why you think it's relevant. Wait for confirmation before proceeding.
-
-## Part 2: Workflow
+## Workflow
 
 ### 1. Identify
 - Identify the decision or position the user is about to commit to. State it as a single clear proposition. Use conversation history for context.

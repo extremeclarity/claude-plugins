@@ -1,6 +1,6 @@
 ---
 name: clarify-framing
-description: Sharpens problem and goal statements to be more precise, unambiguous, complete, and well-scoped. Use this whenever the user states a problem or goal, so that you're fully aligned on what they want to achieve.
+description: Sharpens problem and goal statements to be more precise, unambiguous, complete, and well-scoped.
 ---
 
 # Introduction
@@ -19,12 +19,7 @@ Focus the conversation on clarifying the user's problem or goal until success cr
 - **Completeness** — Full picture captured from available information
 - **Scope** — Boundaries are neither too broad nor too narrow
 
-## Part 1: Evaluate
-
-- Think about whether this skill actually applies to the current situation. If it doesn't, skip silently and move on.
-- If it does, suggest it to the user conversationally. Briefly explain why you think it's relevant. Wait for confirmation before proceeding.
-
-## Part 2: Workflow
+## Workflow
 
 - Across all stages, focus on what the user wants to achieve, not how to achieve it.
 

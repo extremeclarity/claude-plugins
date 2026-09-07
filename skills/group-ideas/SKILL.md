@@ -1,6 +1,6 @@
 ---
 name: group-ideas
-description: Consolidates ideas into strategic themes by deduplicating and grouping. Use this whenever a list of ideas emerges from the conversation that could benefit from organising.
+description: Consolidates ideas into strategic themes by deduplicating and grouping.
 ---
 
 # Introduction
@@ -22,12 +22,7 @@ Deduplicate ideas, then explore the space of possible groupings from two perspec
 - **Actionable** — Each theme can be evaluated or prioritised independently
 - **Maximum 7 themes** — Fewer is better. Force hard choices.
 
-## Part 1: Evaluate
-
-- Think about whether this skill actually applies to the current situation. If it doesn't, skip silently and move on.
-- If it does, suggest it to the user conversationally. Briefly explain why you think it's relevant. Wait for confirmation before proceeding.
-
-## Part 2: Workflow
+## Workflow
 
 ### 1. Track progress
 - Create a task list so the user can track progress:

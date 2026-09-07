@@ -1,6 +1,6 @@
 ---
 name: test-thesis
-description: Tests whether a thesis or hypothesis holds up under adversarial scrutiny. Use this when the user is doing strategic planning and has a thesis or hypothesis they want to evaluate for robustness.
+description: Tests whether a thesis or hypothesis holds up under adversarial scrutiny.
 ---
 
 # Introduction
@@ -12,12 +12,7 @@ Determine what's defensible, what's contested, and what falls apart in a thesis 
 
 Two context-blind agents analyse the thesis in parallel — one builds the strongest case FOR, one finds the strongest case AGAINST. They exchange findings and refine. The main agent synthesises into a defensibility spectrum.
 
-## Part 1: Evaluate
-
-- Think about whether this skill actually applies to the current situation. If it doesn't, skip silently and move on.
-- If it does, suggest it to the user conversationally. Briefly explain why you think it's relevant. Wait for confirmation before proceeding.
-
-## Part 2: Workflow
+## Workflow
 
 ### 1. Track progress
 - Create a task list so the user can track progress:

@@ -1,6 +1,6 @@
 ---
 name: audit-options
-description: Checks whether a set of options is well-constructed. Use this whenever the user presents options or choices to evaluate.
+description: Checks whether a set of options is well-constructed.
 ---
 
 # Introduction
@@ -22,12 +22,7 @@ Audit the option set using a context-blind agent against framing integrity crite
 - **No scope mismatch** — Options are at comparable levels of abstraction
 - **No constraint fabrication** — Constraints limiting the option set are real and relevant
 
-## Part 1: Evaluate
-
-- Think about whether this skill actually applies to the current situation. If it doesn't, skip silently and move on.
-- If it does, suggest it to the user conversationally. Briefly explain why you think it's relevant. Wait for confirmation before proceeding.
-
-## Part 2: Workflow
+## Workflow
 
 ### 1. Identify
 - Identify the option set the user has presented. State the decision context and list the options clearly. Use conversation history for context.

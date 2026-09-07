@@ -1,6 +1,6 @@
 ---
 name: brainstorm
-description: Generates diverse solution ideas using parallel agents with different perspectives. Use this whenever the user is exploring solutions for a problem or goal.
+description: Generates diverse solution ideas using parallel agents with different perspectives.
 ---
 
 # Introduction
@@ -20,12 +20,7 @@ Frame the problem as How Might We questions, spawn parallel agents with differen
 - **Actionable** — Concrete enough to evaluate
 - **Novelty** — Not just restated existing solutions
 
-## Part 1: Evaluate
-
-- Think about whether this skill actually applies to the current situation. If it doesn't, skip silently and move on.
-- If it does, suggest it to the user conversationally. Briefly explain why you think it's relevant. Wait for confirmation before proceeding.
-
-## Part 2: Workflow
+## Workflow
 
 ### 1. Track progress
 - Create a task list so the user can track progress:

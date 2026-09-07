@@ -1,6 +1,6 @@
 ---
 name: breakdown-problem
-description: Breaks problems and goals into independent parts that can be tackled separately. Use this whenever the user states a problem or goal that has multiple dimensions or parts.
+description: Breaks problems and goals into independent parts that can be tackled separately.
 ---
 
 # Introduction
@@ -20,12 +20,7 @@ Propose a breakdown, then iteratively validate and refine using a context-blind 
 - **Problem-focused** — Sub-parts describe problems or goals, not solutions
 - **Actionable** — Each sub-part can be worked on independently
 
-## Part 1: Evaluate
-
-- Think about whether this skill actually applies to the current situation. If it doesn't, skip silently and move on.
-- If it does, suggest it to the user conversationally. Briefly explain why you think it's relevant. Wait for confirmation before proceeding.
-
-## Part 2: Workflow
+## Workflow
 
 - Across all steps, focus on what the problem or goal IS, not how to solve it.
 

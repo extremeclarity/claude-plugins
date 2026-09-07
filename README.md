@@ -62,4 +62,5 @@ Context-blind agents have no access to conversation history or files. They are u
   marketplace.json     Marketplace manifest
 skills/                One directory per skill, each holding a SKILL.md
 commands/              Slash commands
+agents/                Tool-restricted subagents spawned by the skills
 ```

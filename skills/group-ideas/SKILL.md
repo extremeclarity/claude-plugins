@@ -49,10 +49,10 @@ Deduplicate ideas, then explore the space of possible groupings from two perspec
 ```
 
 ### 4. Generate problem-space themes
-- Spawn a context-blind agent (Haiku task agent). Name it: "Problem-space theme design". Use the following prompt:
+- Spawn a blind-reasoner agent (Haiku). Name it: "Problem-space theme design". Use the following prompt:
 
 ```
-You are designing themes to organise solutions for a problem. Do NOT read any files, search any directories, or look for additional context. Work ONLY with the problem description below. You will NOT see the actual solutions — this is intentional.
+You are designing themes to organise solutions for a problem. Work ONLY with the problem description below. You will NOT see the actual solutions — this is intentional.
 
 PROBLEM: "{problem_description}"
 
@@ -70,7 +70,7 @@ For each grouping, state:
 
 ### 5. Select best grouping
 - This step runs silently.
-- Spawn an Opus task agent. Name it: "Select best grouping". Pass it all groupings from steps 3 and 4, the deduplicated ideas, and the success criteria. Use the following prompt:
+- Spawn a blind-reasoner agent (Opus). Name it: "Select best grouping". Pass it all groupings from steps 3 and 4, the deduplicated ideas, and the success criteria. Use the following prompt:
 
 ```
 You are selecting the best theme grouping for a set of ideas. You have groupings from two sources — some designed with knowledge of the actual ideas, some designed from the problem description alone without seeing ideas.

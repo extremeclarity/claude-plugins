@@ -60,11 +60,11 @@ Frame the problem as How Might We questions, spawn parallel agents with differen
 - Skip this step if all primes are context-blind.
 
 ### 6. Generate
-- For each prime, spawn an agent (Explore task agent, Haiku). Name each after its prime.
+- For each prime, spawn a blind-reasoner agent (Haiku). Name each after its prime.
 
 **Context-blind prompt:**
 ```
-You are brainstorming solutions from a {prime} perspective. Do NOT read any files, search any directories, or look for additional context. Work ONLY with what is given below.
+You are brainstorming solutions from a {prime} perspective. Work ONLY with what is given below.
 
 HMW QUESTIONS:
 {hmw_questions}
@@ -74,7 +74,7 @@ Generate 5 solution ideas per HMW question. Be concrete and specific. Think from
 
 **Context-aware prompt:**
 ```
-You are brainstorming solutions from a {prime} perspective. Do NOT read any files, search any directories, or look for additional context. Work ONLY with what is given below.
+You are brainstorming solutions from a {prime} perspective. Work ONLY with what is given below.
 
 PROJECT CONTEXT:
 {gathered_context}

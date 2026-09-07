@@ -25,10 +25,10 @@ Run a premortem on the decision using a context-blind agent. The agent assumes t
 - Identify the decision or position the user is about to commit to. State it as a single clear proposition. Use conversation history for context.
 
 ### 2. Premortem
-- Spawn a context-blind agent (Explore task agent, Haiku). Name it: "Premortem". Use the following prompt:
+- Spawn a blind-reasoner agent (Haiku). Name it: "Premortem". Use the following prompt:
 
 ```
-You are running a premortem. Do NOT read any files, search any directories, or look for additional context. Work ONLY with the proposition below. Respond with your reasoning directly.
+You are running a premortem. Work ONLY with the proposition below. Respond with your reasoning directly.
 
 PROPOSITION: "{proposition}"
 

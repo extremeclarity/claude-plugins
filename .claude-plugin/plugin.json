@@ -3,5 +3,6 @@
   "description": "Thinking skills that improve conversation quality before execution",
   "version": "0.3.0",
   "commands": "./commands/",
-  "skills": "./skills/"
+  "skills": "./skills/",
+  "agents": "./agents/"
 }

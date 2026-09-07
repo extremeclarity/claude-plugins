@@ -38,7 +38,9 @@ DECISION CONTEXT: "{context}"
 OPTIONS:
 {options}
 
-Evaluate this option set against these 7 framing integrity criteria:
+First apply the vanishing options test. Imagine every option above is suddenly unavailable and the decision still has to be addressed. Sketch 2-3 approaches you would use instead.
+
+Then evaluate the option set against these 7 framing integrity criteria, using your vanishing-options sketches to inform criterion 1:
 1. Omission — are obvious solution categories missing?
 2. Dimensional collapse — is the space artificially flattened to one axis?
 3. Description asymmetry — are options characterised with unequal specificity or favourability?
